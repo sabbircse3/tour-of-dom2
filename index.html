@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of Dom</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <style>
+        li{
+            color: yellowgreen;
+        }
+        #fruits-title{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my Dom</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus tenetur eius dolorem voluptatem ad, magnam hic laborum nemo fugiat quam. Illum saepe alias quis sint, eum facere ipsam nobis corrupti!</p>
+    </header>
+    <main>
+        <section>
+            <h1>Mt Awesome Dome de baba</h1>
+            <ul>
+                <li>Jalali set</li>
+                <li>Shafayet</li>
+                <li>bonobash</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="fruits-title">Fruits I like</h1>
+            <ul>
+                <li>Banana</li>
+                <li>Apple</li>
+                <li>Carote</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places-title">Places I like to visit</h1>
+            <ul>
+                <li>Sundorban</li>
+                <li>Bandorban</li>
+                <li>Katabon</li>
+                <li>shalbon</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="js/dom.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        console.log(liCollection);
+        for (const li of liCollection) {
+            console.log(li.innerText);
+        }
+        const allHeading = document.getElementsByTagName('h1');
+        for (const h1 of allHeading) {
+            console.log(h1.innerText);
+        }
+    </script>
+</body>
+</html>
